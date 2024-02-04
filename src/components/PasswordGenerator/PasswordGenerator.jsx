@@ -1,14 +1,17 @@
 import React from 'react'
 import { LuRotateCcw } from "react-icons/lu";
+import { CiCircleMinus, CiCirclePlus } from "react-icons/ci";
+import Box from '@mui/material/Box';
+import  Slider  from '@mui/material/Slider';
 
 function PasswordGenerator() {
   return (
-      <div className="flex justify-center items-center">
-          <div className="flex md:flex-row flex-col justify-center items-center gap-0 md:gap-2  w-fit p-1">
+      <div className="border-2 flex flex-col justify-center items-center w-fit">
+          <div className="border-2 flex md:flex-row flex-col justify-center items-center gap-0 md:gap-2  w-fit p-1">
               <div className="border-2 flex items-center gap-1 md:gap-3 p-2 md:p-3 rounded-full">
                   <input
                       type="text"
-                      className="font-light tracking-normal md:tracking-wide focus:border-0 focus:outline-none text-base md:text-2xl ml-2 md:ml-5 text-ellipsis w-48 md:w-fit"
+                      className="border-0 font-light tracking-normal md:tracking-wide focus:border-0 focus:outline-none text-base md:text-2xl ml-2 md:ml-5 text-ellipsis w-48 md:w-fit"
                       value="Rahul Siddhardh "
                       disabled
                   ></input>
@@ -27,7 +30,25 @@ function PasswordGenerator() {
                   </button>
               </div>
           </div>
-          <div></div>
+          <div className='border-2 mt-5 border-yellow-500 w-full'>
+            <div className='border-2 flex flex-col justify-center items-center gap-4 m-3 p-2'>
+                <label htmlFor="length">
+                    <span>Password Length</span>: <span>12</span>
+                </label>
+                <div className='flex justify-center items-center gap-2 w-full'>
+                    <button>
+                        <CiCircleMinus className='text-5xl'/>
+                    </button>
+                    <div className= 'w-48'>
+                        <Slider min = {4} max = {50} defaultValue={12} size = {'medium'}aria-label="Default" valueLabelDisplay="auto" />
+                    </div>
+                    <button>
+                        <CiCirclePlus className='text-5xl'/>
+                    </button>
+                </div>
+            </div>
+            <div></div>
+          </div>
       </div>
   );
 }
