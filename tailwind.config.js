@@ -7,10 +7,9 @@ export default {
                 height: "height",
                 spacing: "margin, padding",
             },
-            // padding: {
-            //     "7.5": "1.9rem",
-			// 	"4.5": "1.15rem"
-            // },
+            colors: {
+                'charcoal': 'rgba(54, 69, 79, 1)'
+            }
         },
     },
     plugins: [
