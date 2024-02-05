@@ -1,8 +1,8 @@
 import React from 'react'
 import { LuRotateCcw } from "react-icons/lu";
 import { CiCircleMinus, CiCirclePlus } from "react-icons/ci";
-import Box from '@mui/material/Box';
 import  Slider  from '@mui/material/Slider';
+import './PasswordGenerator.css'
 
 function PasswordGenerator() {
   return (
@@ -40,7 +40,7 @@ function PasswordGenerator() {
                         <CiCircleMinus className='text-5xl'/>
                     </button>
                     <div className= 'w-48'>
-                        <Slider min = {4} max = {50} defaultValue={12} size = {'medium'}aria-label="Default" valueLabelDisplay="auto" />
+                        <Slider min = {4} max = {50} defaultValue={12} aria-label="Default" valueLabelDisplay="auto" />
                     </div>
                     <button>
                         <CiCirclePlus className='text-5xl'/>
