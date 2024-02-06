@@ -9,11 +9,12 @@ const rangeTheme = createTheme({
             styleOverrides: {
                 track: {
                     height: "13px",
-                    color: "rgba(59, 130, 246, 1)",
+                    color: "#70798c",
                 },
                 rail: {
                     height: "10px",
                     color: "gray",
+                    boxShadow: "rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset"
                 },
                 thumb: {
                     height: "33px",
@@ -22,8 +23,9 @@ const rangeTheme = createTheme({
                         height: "36px",
                         width: "36px",
                     },
-                    color: "white",
-                    border: `1px solid blue`,
+                    boxShadow: '0px 0px 15px 1px rgba(0,0,0,0.3)',
+                    color: "#a99985",
+                    border: `0px solid blue`,
                 },
             },
         },
@@ -44,6 +46,13 @@ function RangeSlider() {
                 aria-label="Default"
                 valueLabelDisplay="off"
                 name="passLength"
+                sx={{
+                    "& .MuiSlider-thumb": {
+                        "&:hover, &.Mui-focusVisible, &.Mui-active": {
+                            boxShadow: "none",
+                        },
+                    },
+                }}
             />
         </ThemeProvider>
     );

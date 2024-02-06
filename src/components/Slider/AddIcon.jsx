@@ -13,9 +13,9 @@ const removeIconTheme = createTheme({
                         fontSize: '3.4rem',
                     },
                     cursor: 'pointer',
-                    color: 'rgba(54, 69, 79, 1)',
+                    color: '#a99985',
                     '&:hover': {
-                        color: 'rgba(28, 100, 242, 1)',
+                        color: '#212529',
                     }
                 },
                 path: {
