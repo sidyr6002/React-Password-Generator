@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input:checked {
+    @apply border-blue-500;
+}
+
+input:checked+div svg {
+    @apply block;
+}

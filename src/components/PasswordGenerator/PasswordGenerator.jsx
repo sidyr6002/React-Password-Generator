@@ -79,8 +79,36 @@ function PasswordGenerator() {
         return password;
     };
 
-    const CopyText = () => {
-        navigator.clipboard.writeText(password);
+    const CopyText = async () => {
+        if (navigator.clipboard === undefined || window.isSecureContext === false) {
+            const textarea = document.createElement("textarea");
+            textarea.value = password;
+
+            // Move the textarea outside the viewport to make it invisible
+            textarea.style.position = "absolute";
+            textarea.style.left = "-99999999px";
+
+            document.body.prepend(textarea);
+
+            // highlight the content of the textarea element
+            textarea.select();
+
+            try {
+                document.execCommand("copy");
+            } catch (err) {
+                console.log(err);
+            } finally {
+                textarea.remove();
+            }
+        } else {
+            try {
+                await navigator.clipboard.writeText(password);
+            } catch (err) {
+                console.log(err);
+            }
+
+        }
+
 
         setActiveSlider(true);
         setInitialRender(false);
@@ -144,7 +172,7 @@ function PasswordGenerator() {
                             )
                         }
                     >
-                        <span className="text-slate-100 transition-none text-sm md:text-base font-bold tracking-wider">
+                        <span className="text-slate-100 transition-none text-sm md:text-base font-bold tracking-wider text-main">
                             Copy
                         </span>
                     </button>
