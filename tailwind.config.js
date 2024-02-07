@@ -19,9 +19,31 @@ export default {
                 'inside': 'inset 2px 2px 6px 1px rgba(0,0,0,0.45)',
                 'checkbox': 'rgba(50, 50, 93, 0.4) 0px 50px 100px -20px, rgba(0, 0, 0, 0.7) 0px 30px 60px -30px, rgba(10, 37, 64, 0.4) 0px -2px 6px 0px inset',
                 'slider': '0px 0px 3px 2px rgba(0,0,0,0.35)'
+            },
+            animation: {
+                'fadeIn': 'fadeInKey 0.5s ease-in',
+                'fadeOut': 'fadeOutKey 0.5s ease-in forwards',
             }
 
         },
+        keyframes: {
+            'fadeInKey': {
+                'from': {
+                    opacity: 0
+                },
+                'to': {
+                    opacity: 1
+                }
+            },
+            'fadeOutKey': {
+                'from': {
+                    opacity: 1
+                },
+                'to': {
+                    opacity: 0
+                }
+            }
+        }
     },
     plugins: [
 		require('flowbite/plugin')

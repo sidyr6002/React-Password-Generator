@@ -1,19 +1,23 @@
-import "./App.css";
-import { AppContextProvider } from "./AppContextProvider";
+import { useContext } from "react";
+import SuccessAlert from "./components/Alert/SuccessAlert";
 import PasswordGenerator from "./components/PasswordGenerator/PasswordGenerator";
+import { SliderAlertContext } from "./context/SliderAlert";
+import "./App.css";
 
 function App() {
+    const { activeSlider, initialRender } = useContext(SliderAlertContext);
+
     return (
         <>
-            <AppContextProvider>
-                    <div className="flex flex-col h-svh justify-center items-center gap-3 bg-main">
-                        <h1 className="text-4xl md:text-5xl font-bold text-darkCement mb-10 flex justify-center items-center">
-                            Password Generator
-                        </h1>
-                        <PasswordGenerator />
-                    </div>
-			</AppContextProvider>
-               
+            <div className="flex flex-col h-svh justify-center items-center gap-3 bg-main">
+                <div className={"fixed top-3 " + (activeSlider ? "animate-fadeIn" : (initialRender ? "hidden" : "animate-fadeOut"))}>
+                     <SuccessAlert />
+                </div>
+                <h1 className="text-4xl md:text-7xl font-bold text-darkCement mb-10 text-center tracking-tight">
+                    Password Generator
+                </h1>
+                <PasswordGenerator />
+            </div>
         </>
     );
 }

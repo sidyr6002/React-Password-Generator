@@ -30,7 +30,7 @@ function Label({ passLength }) {
     }
 
     return (
-        <label className={"text-xs md:text-sm font-semibold text-blue-600 " + backgroundColor() +  " px-3 py-1 rounded-md tracking-normal md:trackingwide md:w-28 text-center"}>
+        <label className={"text-xs md:text-sm font-semibold text-darkCement " + backgroundColor() +  " px-3 py-1 rounded-md tracking-normal md:trackingwide md:w-28 text-center"}>
             {Strength()}
         </label>
     );

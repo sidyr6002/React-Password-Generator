@@ -11,10 +11,13 @@ const removeIconTheme = createTheme({
                     fontSize: '3.1rem',
                     '@media (min-width: 600px)': {
                         fontSize: '3.4rem',
+                        '&:hover': {
+                            color: '#212529',
+                        }
                     },
                     cursor: 'pointer',
                     color: '#a99985',
-                    '&:hover': {
+                    '&:active': {
                         color: '#212529',
                     },
                 }
