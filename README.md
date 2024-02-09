@@ -57,4 +57,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 **Additional Information:**
 
+For more information, feedback, or support, please visit our project website [here](https://react-password-generator-zeta-three.vercel.app/).
 We hope you find Password Generator valuable for creating strong and secure passwords!
