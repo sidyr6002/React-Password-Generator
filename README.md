@@ -53,7 +53,7 @@ You can further customize your password generation experience by:
 
 **License:**
 
-This project is licensed under the MIT License[LICENCE]. See the LICENSE file for details.
+This project is licensed under the [MIT License](LICENCE). See the LICENSE file for details.
 
 **Additional Information:**
 
