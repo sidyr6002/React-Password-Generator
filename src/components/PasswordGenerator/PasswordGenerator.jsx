@@ -75,7 +75,7 @@ function PasswordGenerator() {
             .sort(() => Math.random() - 0.5)
             .join("");
 
-        console.log(password);
+        //console.log(password);
         return password;
     };
 
